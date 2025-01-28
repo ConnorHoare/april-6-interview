@@ -29,10 +29,10 @@ const TabClient = ({ customers, products, sales }) => {
 
     return (
         <>
-            <div>
-                <button onClick={() => handleTabChange("customers")}>Customers</button>
-                <button onClick={() => handleTabChange("sales")}>Sales</button>
-                <button onClick={() => handleTabChange("products")}>Products</button>
+            <div className='flex justify-between gap-4 items-center '>
+                <button className='border rounded px-4 py-2' onClick={() => handleTabChange("customers")}>Customers</button>
+                <button className='border rounded px-4 py-2' onClick={() => handleTabChange("sales")}>Sales</button>
+                <button className='border rounded px-4 py-2' onClick={() => handleTabChange("products")}>Products</button>
             </div>
 
 
