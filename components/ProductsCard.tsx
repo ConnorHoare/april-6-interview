@@ -1,4 +1,5 @@
 import React from 'react'
+import Report from './Report';
 
 interface ProductsType {
     partNumber: string;
@@ -6,6 +7,7 @@ interface ProductsType {
     category: string;
     subCategory: string;
 }
+
 
 const ProductsCard = ({partNumber, description, category, subCategory}: ProductsType) => {
   return (
@@ -28,6 +30,7 @@ const ProductsCard = ({partNumber, description, category, subCategory}: Products
                 <p>{subCategory}</p>
             </div>
         </div>
+        <Report part_number={partNumber}/>
     </div>
   )
 }

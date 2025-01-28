@@ -49,7 +49,7 @@ const TabClient = ({ customers, products, sales }) => {
                 <>
                     <SearchBar onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setInput(e.target.value) }} value={input} />
                     {filteredSales.map((sale) => (
-                        <CustomerSalesCard key={sale.key} customerRef={sale.customerRef} date={sale.date} orderNumber={sale.order_number} partNumber={sale.partNumber} />
+                        <CustomerSalesCard key={sale.key} customerRef={sale.customer_ref} date={sale.date} orderNumber={sale.order_number} partNumber={sale.part_number} />
                     ))}
                 </>
             )}
@@ -58,7 +58,7 @@ const TabClient = ({ customers, products, sales }) => {
                 <>
                     <SearchBar onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setInput(e.target.value) }} value={input} />
                     {filteredProducts.map((product) => (
-                        <ProductsCard key={product.key} category={product.category} description={product.description} partNumber={product.partNumber} subCategory={product.subCategory} />
+                        <ProductsCard key={product.key} category={product.category} description={product.description} partNumber={product.part_number} subCategory={product.sub_category} />
                     ))}
                 </>
             )}
